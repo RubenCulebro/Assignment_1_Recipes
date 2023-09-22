@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RecipeList from './RecipeList';
 import AddRecipe from './AddRecipe';
+import Navigation from './Navigation';
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -24,12 +25,7 @@ function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/add">Add Recipe</Link></li>
-          </ul>
-        </nav>
+      <Navigation />
         <Routes>
           <Route path="/" element={<RecipeList recipes={recipes} onRemove={removeRecipe} />} />
           <Route path="/add" element={<AddRecipe onAdd={addRecipe} />} />
