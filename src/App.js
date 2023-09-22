@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import RecipeList from './RecipeList';
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -11,14 +12,22 @@ function App() {
       .catch((error) => console.error("Error fetching recipes:", error));
   }, []);
 
+  const removeRecipe = (recipeName) => {
+    setRecipes(recipes.filter(recipe => recipe.name !== recipeName));
+  };
+
   return (
     <Router>
       <div>
         <nav>
-          {/* Navigation links */}
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/add">Add Recipe</Link></li>
+          </ul>
         </nav>
         <Routes>
-          {/* Routes */}
+          <Route path="/" element={<RecipeList recipes={recipes} onRemove={removeRecipe} />} />
+          {/* AddRecipe route */}
         </Routes>
       </div>
     </Router>
