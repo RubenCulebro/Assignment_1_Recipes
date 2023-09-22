@@ -1,0 +1,16 @@
+[
+  {
+      "name": "Teriyaki Chicken",
+      "ingredients": "2 lb boneless, skinless chicken thighs (910 g), 1 cup soy sauce (240 mL), ½ cup brown sugar (110 g)",
+      "directions": "Heat a large nonstick pan over medium-high heat. Add the chicken and sear until golden brown on both sides. Add the soy sauce and brown sugar and stir to combine, then bring to a boil. Cook until the sauce reduces and coats the chicken.",
+      "description": "Delicious Teriyaki Chicken",
+      "image": "images/teriyaki_chicken.jpg"
+  },
+  {
+      "name": "Cheesy Garlic Broccoli",
+      "ingredients": "3 crowns broccoli, 1 ¾ cups shredded cheddar cheese (175 g), 3 cloves garlic, crushed salt (to taste), pepper (to taste)",
+      "directions": "Preheat oven to 375ºF (190ºC). Spread out broccoli in a medium rectangular casserole dish. Stir the garlic and cheddar cheese together in a separate bowl. Sprinkle the cheese evenly over broccoli and add salt and pepper to taste. Bake for 25 minutes.",
+      "description": "Tasty Cheesy Garlic Broccoli",
+      "image": "images/cheesy_broccoli.jpg"
+  }
+]
